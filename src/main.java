@@ -1,17 +1,13 @@
-import java.util.Scanner;
 import operations.calculator.*;
 
 public class main {
 
     public static void main(String[] args){
 
-        System.out.println("Which operation would you like to perform?");
+        String operation = UserInput.userOperationInput();
 
-        Scanner scanner = new Scanner(System.in);
-        String operation = scanner.nextLine();
-
-        int number1 = UserInput.userOperationInput();
-        int number2 = UserInput.userOperationInput();
+        int number1 = UserInput.userNumberInput();
+        int number2 = UserInput.userNumberInput();
 
         switch(operation){
             case "+":
@@ -33,8 +29,6 @@ public class main {
             default:
                 System.out.println("The symbol " + operation + " is not a valid operation.");
         }
-        scanner.close();
-
 
     }
 }
