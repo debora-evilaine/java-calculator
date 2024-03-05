@@ -13,19 +13,25 @@ public class main {
         int number1 = UserInput.userOperationInput();
         int number2 = UserInput.userOperationInput();
 
+        switch(operation){
+            case "+":
+                AdditionOperation.addition(number1, number2);
+                break;
 
-        if(operation.equals("+")){
-            AdditionOperation.addition(number1, number2);
-        }
-        else if(operation.equals("-")){
-            SubtractionOperation.subtraction(number1, number2);
-        }
+            case "-":
+                SubtractionOperation.subtraction(number1, number2);
+                break;
 
-        else if(operation.equals("/")){
-            DivisionOperation.division(number1, number2);
-        }
-        else{
-            MultiplicationOperation.multiplication(number1, number2);
+            case "*":
+                MultiplicationOperation.multiplication(number1, number2);
+                break;
+
+            case "/":
+                DivisionOperation.division(number1, number2);
+                break;
+
+            default:
+                System.out.println("The symbol " + operation + " is not a valid operation.");
         }
         scanner.close();
 
