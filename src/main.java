@@ -12,41 +12,38 @@ public class main {
         String operation = scanner.nextLine();
 
         if(operation.equals("+")){
-            System.out.println("Enter the first number: ");
+            PromptUserInput.promptOperationInput();
             int number1 = scanner.nextInt();
-            System.out.println("Enter the second number: ");
+            PromptUserInput.promptOperationInput();
             int number2 = scanner.nextInt();
 
             AdditionOperation.addition(number1, number2);
         }
         else if(operation.equals("-")){
-            System.out.println("Enter the first number: ");
+            PromptUserInput.promptOperationInput();
             int number1 = scanner.nextInt();
-            System.out.println("Enter the second number: ");
+            PromptUserInput.promptOperationInput();
             int number2 = scanner.nextInt();
 
             SubtractionOperation.subtraction(number1, number2);
         }
 
         else if(operation.equals("/")){
-            System.out.println("Enter the first number: ");
+            PromptUserInput.promptOperationInput();
             int number1 = scanner.nextInt();
-            System.out.println("Enter the second number: ");
+            PromptUserInput.promptOperationInput();
             int number2 = scanner.nextInt();
 
             DivisionOperation.division(number1, number2);
         }
         else{
-            System.out.println("Enter the first number: ");
+            PromptUserInput.promptOperationInput();
             int number1 = scanner.nextInt();
-            System.out.println("Enter the second number: ");
+            PromptUserInput.promptOperationInput();
             int number2 = scanner.nextInt();
 
             MultiplicationOperation.multiplication(number1, number2);
         }
-
-
-
         scanner.close();
 
 
